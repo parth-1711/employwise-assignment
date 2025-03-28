@@ -31,8 +31,10 @@ const EditUser = () => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    await updateUser(id, user);
-    navigate("/users");
+    let data=await updateUser(id, user);
+    console.log(data);
+    
+    navigate("/");
   };
 
   return (
